@@ -4,7 +4,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 
 import static minsait.ttaa.datio.common.Common.*;
-import static minsait.ttaa.datio.common.naming.PlayerInput.teamPosition;
+import static minsait.ttaa.datio.common.naming.PlayerInput.nationality;
 import static org.apache.spark.sql.SaveMode.Overwrite;
 
 abstract class Writer {
@@ -13,7 +13,7 @@ abstract class Writer {
         df
                 .coalesce(2)
                 .write()
-                .partitionBy(teamPosition.getName())
+                .partitionBy(nationality.getName())
                 .mode(Overwrite)
                 .parquet(OUTPUT_PATH);
     }
