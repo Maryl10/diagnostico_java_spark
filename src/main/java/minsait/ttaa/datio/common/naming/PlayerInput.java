@@ -2,7 +2,7 @@ package minsait.ttaa.datio.common.naming;
 
 public final class PlayerInput {
 
-	public static Field shortName = new Field("short_name");
+    public static Field shortName = new Field("short_name");
     public static Field longName = new Field("long_name");
     public static Field age = new Field("age");
     public static Field heightCm = new Field("height_cm");
